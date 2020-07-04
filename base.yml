@@ -1,0 +1,8 @@
+DB:
+  baseUrl: 47.100.7.150
+  port: 27017
+  dbName: 
+    development: fiction_dev
+    production: fiction
+  user: will
+  pass: Qwer1234
