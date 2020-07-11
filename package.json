@@ -30,13 +30,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/willNiu90/koa2-demo.git"
+    "url": "git+https://github.com/willNiu90/fiction-api.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/willNiu90/koa2-demo/issues"
+    "url": "https://github.com/willNiu90/fiction-api/issues"
   },
-  "homepage": "https://github.com/willNiu90/koa2-demo#readme"
+  "homepage": "https://github.com/willNiu90/fiction-api#readme"
 }
