@@ -25,7 +25,7 @@
   },
   "scripts": {
     "dev": "nodemon src/app",
-    "pro": "pm2-dev start ecosystem.config.js",
+    "pro": "pm2-dev start ecosystem.config.js --watch",
     "test": "mocha src/test/*.test.js"
   },
   "repository": {
