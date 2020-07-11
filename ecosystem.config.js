@@ -18,14 +18,17 @@ module.exports = {
       merge_logs: true,         //集群情况下，可以合并日志
     }
   ],
-  // deploy: {
-  //     production : {
-  //       user: 'node',                      //ssh 用户
-  //       host: '212.83.163.1',              //ssh 地址
-  //       ref: 'origin/master',             //GIT远程/分支
-  //       repo: 'git@github.com:repo.git',   //git地址
-  //       path: '/var/www/production',       //服务器文件路径
-  //       "post-deploy": 'npm install && pm2 reload ecosystem.config.js --env production'  //部署后的动作
-  //     }
-  // }
+  deploy: {
+      production : {
+        user: 'root',                      //ssh 用户
+        host: '47.100.7.150',              //ssh 地址
+        port: '22',
+        ssh_options: 'StrictHostKeyChecking=no',
+        ref: 'origin/master',             //GIT远程/分支
+        repo: 'https://github.com/willNiu90/fiction-api',   //git地址
+        'pre-deploy': 'git fetch --all', // 部署前执行
+        path: '/var/www/production',       //服务器文件路径
+        "post-deploy": 'npm install && pm2 reload ecosystem.config.js --env production'  //部署后的动作
+      }
+  }
 }
