@@ -28,7 +28,7 @@ module.exports = {
         repo: 'https://github.com/willNiu90/fiction-api',   //git地址
         'pre-deploy': 'git fetch --all', // 部署前执行
         path: '/var/www/production',       //服务器文件路径
-        "post-deploy": 'npm install && pm2 reload ecosystem.config.js --env production'  //部署后的动作
+        "post-deploy": 'npm install && pm2 reload ecosystem.config.js'  //部署后的动作
       }
   }
 }
