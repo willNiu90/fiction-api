@@ -41,13 +41,18 @@ app.use(async (ctx, next) => {
   }
 })
 app.use(cors())
-app.use(bodyParser())
+app.use(bodyParser({
+  'formLimit':'20mb',
+  'jsonLimit':'20mb',
+  'textLimit':'20mb',
+}))
 // app.use(koajwt({
 //   secret: 'my_token'
 // }).unless({
 //   path: [/\login/, /files/, /test/]
 // }))
 app.use(routers.routes(), routers.allowedMethods())
+
 
 
 app.listen(3000)
