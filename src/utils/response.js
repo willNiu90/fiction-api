@@ -1,8 +1,8 @@
 class ResponseObj {
-  constructor(opt) {
-    this.code = opt.code || 200
-    this.result = opt.result || null
-    this.msg = opt.msg || 'success'
+  constructor({ code = 200, result = null, msg = 'success'}) {
+    this.code = code
+    this.result = result
+    this.msg = msg
   }
 }
 
