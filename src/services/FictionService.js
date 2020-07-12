@@ -6,7 +6,9 @@ class FictionService {
     return res
   }
   static async getFictions() {
+    console.time('start')
     const res = await FictionModel.find()
+    console.timeEnd('start')
     return res
   }
   static async getFiction(_id) {
