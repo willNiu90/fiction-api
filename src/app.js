@@ -28,6 +28,8 @@ mongoose.set('useCreateIndex', true)
 
 app.use(async (ctx, next) => {
   try {
+    console.log('进来了')
+    console.time('total')
     ctx.qs= Qs.parse(ctx.query)
     await next()
   } catch (err) {

@@ -10,8 +10,10 @@ class FictionControler {
     ctx.body = retObj
   }
   static async list(ctx) {
+    console.log('进入control')
     const result = await FictionService.getFictions()
     const retObj = new ResponseObj({result})
+    console.timeEnd('total')
     ctx.body = retObj
   }
   static async show(ctx) {
